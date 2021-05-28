@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<style type="text/css">
+body{
+	background-image: url('whatisnlp.jpg');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+    background-size: cover;
+}
+</style>
+<body>
+<div class="login">
+	<h1>NLP Semantics</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<textarea id="text" rows="4" cols="50" name="text" placeholder="taking input" required="required" ></textarea><br>
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">MAGIC</button>
+    </form>
+
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+
+</body>
+</html>
